@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NC Sati and Co | Chartered Accountants</title>
+  <title>NC Sati and Co | Chartered Accountant in Haldwani, Uttarakhand</title>
   <meta name="description" content="NC Sati and Co – Chartered Accountant firm in Haldwani, Uttarakhand. GST, Income Tax, Audit, ROC Compliance, Bookkeeping, Business Advisory services." />
   <meta name="keywords" content="Chartered Accountant in Haldwani, CA in Uttarakhand, GST, Tax, Audit, ROC Compliance, Bookkeeping" />
   <meta name="author" content="NC Sati and Co" />
@@ -69,35 +69,48 @@
       border-bottom: 1px solid rgba(201, 162, 39, 0.25);
     }
     .navbar-inner {
-      max-width: 1100px; margin: 0 auto;
+      max-width: 1200px; margin: 0 auto;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 0 1.5rem; height: 62px; gap: 1rem;
+      padding: 0 1rem; height: 62px; gap: 0.75rem;
+    }
+    .navbar-left {
+      display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0;
+    }
+    .navbar-ca-logo {
+      height: 42px; width: auto; display: block; flex-shrink: 0;
+      background: #fff; border-radius: 4px; padding: 3px 5px;
     }
     .navbar-brand {
       font-family: 'DM Serif Display', serif;
       font-size: 1rem; font-weight: 700;
-      color: #fff; white-space: nowrap; flex-shrink: 0;
+      color: #fff; white-space: nowrap;
+      line-height: 1.2;
     }
-    .navbar-brand span { color: var(--gold); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; flex: 1; justify-content: center; }
-    .nav-links a { font-size: 0.85rem; color: rgba(255,255,255,0.7); transition: color 0.2s; letter-spacing: 0.02em; }
+    .navbar-brand .brand-sub {
+      display: block; font-family: 'DM Sans', sans-serif;
+      font-size: 0.65rem; color: rgba(255,255,255,0.5);
+      font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 1px;
+    }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { font-size: 0.875rem; color: rgba(255,255,255,0.7); transition: color 0.2s; letter-spacing: 0.02em; }
     .nav-links a:hover { color: var(--gold); }
-    .navbar-ca-logo { height: 40px; width: auto; flex-shrink: 0; display: block; }
     .menu-toggle { display: none; background: none; border: none; cursor: pointer; color: #fff; }
     .menu-toggle svg { width: 22px; height: 22px; }
     .mobile-menu {
       display: none; background: #1a2d45;
       border-bottom: 1px solid rgba(201,162,39,0.2);
-      padding: 0.5rem 1.5rem 1rem;
+      padding: 0.4rem 1rem 0.8rem;
     }
-    .mobile-menu a { display: block; padding: 0.6rem 0; font-size: 0.875rem; color: rgba(255,255,255,0.7); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .mobile-menu a { display: block; padding: 0.55rem 0; font-size: 0.9rem; color: rgba(255,255,255,0.7); border-bottom: 1px solid rgba(255,255,255,0.05); }
     .mobile-menu a:hover { color: var(--gold); }
 
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .menu-toggle { display: block; }
       .mobile-menu.open { display: block; }
-      .navbar-brand { font-size: 0.9rem; }
+      .navbar-brand { font-size: 0.88rem; }
+      .navbar-ca-logo { height: 36px; }
+      .navbar-inner { padding: 0 0.75rem; }
     }
 
     /* ── Sections ── */
@@ -180,7 +193,7 @@
     /* ── About ── */
     .about-content { max-width: 720px; margin: 0 auto; }
     .about-content p {
-      color: var(--muted); margin-bottom: 1.1rem; font-size: 0.95rem; line-height: 1.8;
+      color: var(--muted); margin-bottom: 1.1rem; font-size: 1rem; line-height: 1.85;
     }
     .about-content p:last-child { margin-bottom: 0; }
     .about-highlight {
@@ -218,8 +231,8 @@
     }
     .service-card:hover .icon { color: var(--gold); }
     .service-card .icon { color: var(--primary-mid); margin-bottom: 1rem; transition: color 0.25s; }
-    .service-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--fg); }
-    .service-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.65; }
+    .service-card h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--fg); }
+    .service-card p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; }
 
     /* Experience card */
     .experience-card {
@@ -244,8 +257,8 @@
       font-family: 'DM Serif Display', serif;
       font-size: 2.4rem; font-weight: 700; color: var(--fg); line-height: 1;
     }
-    .experience-card .label { font-size: 0.9rem; color: var(--fg); margin-top: 0.3rem; font-weight: 600; }
-    .experience-card .sub { font-size: 0.75rem; color: var(--muted); margin-top: 0.4rem; }
+    .experience-card .label { font-size: 1rem; color: var(--fg); margin-top: 0.3rem; font-weight: 600; }
+    .experience-card .sub { font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
 
     /* ── Detailed Services ── */
     .detailed-grid {
@@ -261,10 +274,10 @@
       transition: border-color 0.2s;
     }
     .detailed-item:hover { border-left-color: var(--primary-mid); }
-    .detailed-item h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--fg); }
+    .detailed-item h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--fg); }
     .detailed-item ul { list-style: none; }
     .detailed-item li {
-      font-size: 0.85rem; color: var(--muted);
+      font-size: 0.95rem; color: var(--muted);
       padding: 0.22rem 0; display: flex; align-items: flex-start; gap: 0.5rem;
     }
     .detailed-item li::before {
@@ -285,7 +298,7 @@
     }
     .founder-bio {
       max-width: 580px; margin: 0 auto;
-      font-size: 0.92rem; color: var(--muted); line-height: 1.75;
+      font-size: 1rem; color: var(--muted); line-height: 1.8;
     }
 
     /* ── Contact ── */
@@ -297,16 +310,16 @@
     .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
     .contact-row { display: flex; gap: 0.85rem; align-items: flex-start; }
     .contact-row svg { width: 20px; height: 20px; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
-    .contact-row .label { font-size: 0.82rem; font-weight: 600; margin-bottom: 0.2rem; color: var(--fg); text-transform: uppercase; letter-spacing: 0.04em; }
-    .contact-row .value { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
+    .contact-row .label { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.2rem; color: var(--fg); text-transform: uppercase; letter-spacing: 0.04em; }
+    .contact-row .value { font-size: 0.95rem; color: var(--muted); line-height: 1.65; }
     .contact-row a.value { color: var(--primary-mid); }
     .contact-row a.value:hover { text-decoration: underline; color: var(--gold); }
 
     .contact-form { display: flex; flex-direction: column; gap: 0.85rem; }
-    .contact-form label { font-size: 0.82rem; font-weight: 600; margin-bottom: 0.15rem; display: block; color: var(--fg); text-transform: uppercase; letter-spacing: 0.03em; }
+    .contact-form label { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.15rem; display: block; color: var(--fg); text-transform: uppercase; letter-spacing: 0.03em; }
     .contact-form input, .contact-form textarea {
       width: 100%; border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 0.55rem 0.85rem; font-size: 0.875rem; font-family: inherit;
+      padding: 0.6rem 0.9rem; font-size: 0.95rem; font-family: inherit;
       background: var(--card); color: var(--fg); outline: none; transition: border-color 0.2s;
     }
     .contact-form input:focus, .contact-form textarea:focus { border-color: var(--primary-mid); box-shadow: 0 0 0 3px rgba(39,74,120,0.08); }
@@ -362,18 +375,23 @@
 <!-- Navbar -->
 <nav class="navbar">
   <div class="navbar-inner">
-    <span class="navbar-brand">NC Sati &amp; Co</span>
+    <div class="navbar-left">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/1/1f/New_CA_India_Logo.png"
+        alt="ICAI Logo"
+        class="navbar-ca-logo"
+      />
+      <span class="navbar-brand">
+        NC Sati &amp; Co
+        <span class="brand-sub">Chartered Accountants</span>
+      </span>
+    </div>
     <ul class="nav-links">
       <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/1/1f/New_CA_India_Logo.png"
-      alt="ICAI – The Institute of Chartered Accountants of India"
-      class="navbar-ca-logo"
-    />
     <button class="menu-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open')" aria-label="Toggle menu">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
@@ -392,7 +410,7 @@
   <div class="hero-content">
     <h1 class="hero-firm-name">NC Sati and Co</h1>
     <p class="hero-designation">Chartered Accountants</p>
-    <p class="hero-sub">Accounting, taxation, audit, GST, ROC and compliance services for businesses and individuals.</p>
+    <p class="hero-sub">Professional accounting, taxation, audit, and compliance services for businesses and individuals in Haldwani, Uttarakhand.</p>
 
   </div>
 </section>
@@ -546,7 +564,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         <div>
           <p class="label">Email</p>
-          <a href="mailto:ncsatiandco@gmail.com" class="value">ncsatiandco@gmail.com</a>
+          <a href="/cdn-cgi/l/email-protection#2648455547524f474842454966414b474f4a0845494b" class="value"><span class="__cf_email__" data-cfemail="4a2429392b3e232b242e29250a2d272b232664292527">[email&#160;protected]</span></a>
         </div>
       </div>
       <div class="contact-row">
@@ -591,10 +609,4 @@
 <footer class="footer">
   <div class="footer-inner">
     <span class="footer-brand">NC Sati and Co</span>
-    <span class="footer-mid">Chartered Accountants &nbsp;·&nbsp; Haldwani, Uttarakhand</span>
-    <span class="footer-copy">&copy; 2025 NC Sati and Co. All rights reserved.</span>
-  </div>
-</footer>
-
-</body>
-</html>
+    <span class="footer-mid">Chartered Accountants &nbsp;·&nbsp; Haldwani, Ut
