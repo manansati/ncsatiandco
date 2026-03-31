@@ -1,54 +1,819 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laptop Cooler</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NC Sati and Co | Chartered Accountant in Haldwani, Uttarakhand</title>
+  <meta name="description" content="NC Sati and Co – Chartered Accountant firm in Haldwani, Uttarakhand. GST, Income Tax, Audit, ROC Compliance, Bookkeeping, Business Advisory services." />
+  <meta name="keywords" content="Chartered Accountant in Haldwani, CA in Uttarakhand, GST, Tax, Audit, ROC Compliance, Bookkeeping" />
+  <meta name="author" content="NC Sati and Co" />
+  <meta name="robots" content="index, follow" />
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <!-- Geo tags for local SEO -->
+  <meta name="geo.region" content="IN-UT" />
+  <meta name="geo.placename" content="Haldwani, Uttarakhand" />
+  <meta name="geo.position" content="29.2162678;79.5169207" />
+  <meta name="ICBM" content="29.2162678, 79.5169207" />
 
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #000000, #1a1a1a);
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-        }
+  <link rel="canonical" href="https://ncsatiandco.com" />
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+  <!-- Open Graph -->
+  <meta property="og:title" content="NC Sati and Co | Chartered Accountant in Haldwani" />
+  <meta property="og:description" content="Professional accounting, taxation, audit, and compliance services in Haldwani, Uttarakhand." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ncsatiandco.com" />
+  <meta property="og:image" content="https://ncsatiandco.com/og-image.jpg" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="NC Sati and Co" />
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NC Sati and Co | Chartered Accountant in Haldwani" />
+  <meta name="twitter:description" content="Professional accounting, taxation, audit, and compliance services in Haldwani, Uttarakhand." />
+  <meta name="twitter:image" content="https://ncsatiandco.com/og-image.jpg" />
 
-        img {
-            width: 400px;
-            max-width: 90%;
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(255,255,255,0.2);
-        }
-    </style>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "NC Sati and Co",
+    "description": "Chartered Accountant firm providing accounting, taxation, audit, and compliance services.",
+    "foundingDate": "2012-10",
+    "founder": { "@type": "Person", "name": "CA Naveen Chandra Sati" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "14, First Floor, JMJK Complex, Basant Vihar, Mukhani Road",
+      "addressLocality": "Haldwani",
+      "addressRegion": "Uttarakhand",
+      "postalCode": "263139",
+      "addressCountry": "IN"
+    },
+    "telephone": "+918475928655",
+    "email": "ncsatiandco@gmail.com"
+  }
+  </script>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+    @media (min-width: 1024px) { html { font-size: 18px; } }
+
+    :root {
+      --bg: #f8f9fb;
+      --fg: #1a2d45;
+      --primary: #1a2d45;
+      --primary-mid: #274a78;
+      --gold: #c9a227;
+      --gold-light: #e6c255;
+      --primary-fg: #ffffff;
+      --muted: #6b7a8d;
+      --border: #dde2ea;
+      --card: #ffffff;
+      --section-alt: #eef1f6;
+      --radius: 8px;
+    }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 { font-family: 'DM Serif Display', serif; }
+    a { color: inherit; text-decoration: none; }
+
+   
+
+    /* ── Navbar ── */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      background: rgba(26, 45, 69, 0.97); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(201, 162, 39, 0.25);
+      transition: box-shadow 0.3s ease;
+    }
+    .navbar.scrolled {
+      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    }
+    .navbar-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 1rem; height: 62px; gap: 0.75rem;
+    }
+    .navbar-left {
+      display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0;
+    }
+    .navbar-ca-logo {
+      height: 42px; width: auto; display: block; flex-shrink: 0;
+      background: #fff; border-radius: 4px; padding: 3px 5px;
+    }
+    .navbar-brand {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1rem; font-weight: 700;
+      color: #fff; white-space: nowrap;
+      line-height: 1.2;
+    }
+    .navbar-brand .brand-sub {
+      display: block; font-family: 'DM Sans', sans-serif;
+      font-size: 0.65rem; color: rgba(255,255,255,0.5);
+      font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 1px;
+    }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { font-size: 0.875rem; color: rgba(255,255,255,0.7); transition: color 0.2s; letter-spacing: 0.02em; }
+    .nav-links a:hover { color: var(--gold); }
+    .menu-toggle { display: none; background: none; border: none; cursor: pointer; color: #fff; }
+    .menu-toggle svg { width: 22px; height: 22px; }
+    .mobile-menu {
+      display: none; background: #1a2d45;
+      border-bottom: 1px solid rgba(201,162,39,0.2);
+      padding: 0.4rem 1rem 0.8rem;
+    }
+    .mobile-menu a { display: block; padding: 0.55rem 0; font-size: 0.9rem; color: rgba(255,255,255,0.7); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .mobile-menu a:hover { color: var(--gold); }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .menu-toggle { display: block; }
+      .mobile-menu.open { display: block; }
+      .navbar-brand { font-size: 0.88rem; }
+      .navbar-ca-logo { height: 36px; }
+      .navbar-inner { padding: 0 0.75rem; }
+    }
+
+    /* ── Sections ── */
+    .section { padding: 4.5rem 1.5rem; }
+    @media (min-width: 768px) { .section { padding: 6rem 2rem; } }
+    .section-alt { background: var(--section-alt); }
+
+    .section-title {
+      font-size: 1.6rem; font-weight: 700;
+      text-align: center; margin-bottom: 3rem;
+      color: var(--fg); position: relative; display: inline-block;
+      width: 100%;
+    }
+    .section-title::after {
+      content: ''; display: block; width: 48px; height: 3px;
+      background: var(--gold); margin: 0.6rem auto 0; border-radius: 2px;
+    }
+    @media (min-width: 768px) { .section-title { font-size: 1.875rem; } }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 88vh; display: flex; align-items: center; justify-content: center;
+      padding-top: 62px; text-align: center; position: relative;
+      background: linear-gradient(150deg, #0e1d2e 0%, #1a2d45 45%, #1f3a5c 100%);
+      overflow: hidden;
+    }
+    .hero-pattern {
+      position: absolute; inset: 0; opacity: 0.06;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    /* Animated floating orbs in hero */
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.15;
+      animation: floatOrb 8s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .hero-orb-1 {
+      width: 300px; height: 300px;
+      background: var(--gold);
+      top: 10%; left: -5%;
+      animation-delay: 0s;
+    }
+    .hero-orb-2 {
+      width: 200px; height: 200px;
+      background: #274a78;
+      bottom: 15%; right: -3%;
+      animation-delay: 3s;
+    }
+    @keyframes floatOrb {
+      0%, 100% { transform: translateY(0px) scale(1); }
+      50% { transform: translateY(-30px) scale(1.05); }
+    }
+    .hero::before {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 750px; padding: 0 1rem; }
+
+    .hero-firm-name {
+      font-family: 'DM Serif Display', serif;
+      color: var(--gold);
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+      margin-bottom: 0.6rem;
+      text-shadow: 0 2px 12px rgba(201,162,39,0.2);
+    }
+    @media (min-width: 768px) { .hero-firm-name { font-size: 4rem; } }
+    @media (min-width: 1024px) { .hero-firm-name { font-size: 4.75rem; } }
+
+    .hero-designation {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.15rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    @media (min-width: 768px) { .hero-designation { font-size: 1.35rem; } }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.58);
+      font-size: 0.95rem;
+      max-width: 480px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(201,162,39,0.12); border: 1px solid rgba(201,162,39,0.35);
+      border-radius: 999px; padding: 0.45rem 1.2rem;
+      color: var(--gold-light); font-size: 0.82rem; letter-spacing: 0.03em;
+    }
+    .hero-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; flex-shrink: 0; animation: pulse 2s infinite; }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(74,222,128,0.4); }
+      50% { opacity: 0.8; box-shadow: 0 0 0 5px rgba(74,222,128,0); }
+    }
+
+    /* ── About ── */
+    .about-content { max-width: 720px; margin: 0 auto; }
+    .about-content p {
+      color: var(--muted); margin-bottom: 1.1rem; font-size: 1rem; line-height: 1.85;
+    }
+    .about-content p:last-child { margin-bottom: 0; }
+    .about-highlight {
+      background: var(--fg); color: #fff;
+      border-radius: var(--radius); padding: 1.25rem 1.5rem;
+      margin-bottom: 1.25rem; display: flex; gap: 1rem; align-items: center;
+    }
+    .about-highlight .hl-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem; color: var(--gold); line-height: 1; flex-shrink: 0;
+    }
+    .about-highlight p { color: rgba(255,255,255,0.75); margin: 0; font-size: 0.88rem; }
+
+    /* ── Services Grid ── */
+    .services-grid {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; gap: 1.25rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 640px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .service-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.6rem;
+      transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+      cursor: default;
+    }
+    .service-card:hover {
+      box-shadow: 0 8px 28px rgba(26,45,69,0.12);
+      transform: translateY(-4px);
+      border-color: var(--gold);
+    }
+    .service-card:hover .icon { color: var(--gold); }
+    .service-card .icon { color: var(--primary-mid); margin-bottom: 1rem; transition: color 0.25s; }
+    .service-card h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--fg); }
+    .service-card p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; }
+
+    .experience-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.6rem;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+      cursor: default;
+    }
+    .experience-card:hover {
+      box-shadow: 0 8px 28px rgba(26,45,69,0.12);
+      transform: translateY(-4px);
+      border-color: var(--gold);
+    }
+    .experience-card svg { color: var(--primary-mid); margin-bottom: 0.75rem; transition: color 0.25s; }
+    .experience-card:hover svg { color: var(--gold); }
+    .experience-card .big {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.4rem; font-weight: 700; color: var(--fg); line-height: 1;
+    }
+    .experience-card .label { font-size: 1rem; color: var(--fg); margin-top: 0.3rem; font-weight: 600; }
+    .experience-card .sub { font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+
+    /* ── Detailed Services ── */
+    .detailed-grid {
+      max-width: 1000px; margin: 0 auto;
+      display: grid; gap: 1.75rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 768px) { .detailed-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .detailed-item {
+      border-left: 3px solid var(--gold);
+      padding-left: 1.25rem;
+      transition: border-color 0.2s;
+    }
+    .detailed-item:hover { border-left-color: var(--primary-mid); }
+    .detailed-item h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--fg); }
+    .detailed-item ul { list-style: none; }
+    .detailed-item li {
+      font-size: 0.95rem; color: var(--muted);
+      padding: 0.22rem 0; display: flex; align-items: flex-start; gap: 0.5rem;
+    }
+    .detailed-item li::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); flex-shrink: 0; margin-top: 7px; opacity: 0.7;
+    }
+
+    /* ── Founder ── */
+    .founder-section { text-align: center; }
+    .founder-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem; color: var(--fg); font-weight: 700; margin-bottom: 0.3rem;
+    }
+    .founder-role { font-size: 0.88rem; color: var(--muted); margin-top: 0.2rem; }
+    .founder-divider {
+      width: 48px; height: 3px; background: var(--gold);
+      margin: 1rem auto; border-radius: 2px;
+    }
+    .founder-bio {
+      max-width: 580px; margin: 0 auto;
+      font-size: 1rem; color: var(--muted); line-height: 1.8;
+    }
+
+    /* ── Contact ── */
+    .contact-grid {
+      max-width: 900px; margin: 0 auto;
+      display: grid; gap: 3rem; grid-template-columns: 1fr;
+    }
+    @media (min-width: 768px) { .contact-grid { grid-template-columns: 1fr 1fr; } }
+    .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+    .contact-row { display: flex; gap: 0.85rem; align-items: flex-start; }
+    .contact-row svg { width: 20px; height: 20px; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+    .contact-row .label { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.2rem; color: var(--fg); text-transform: uppercase; letter-spacing: 0.04em; }
+    .contact-row .value { font-size: 0.95rem; color: var(--muted); line-height: 1.65; }
+    .contact-row a.value { color: var(--primary-mid); }
+    .contact-row a.value:hover { text-decoration: underline; color: var(--gold); }
+
+    .contact-form { display: flex; flex-direction: column; gap: 0.85rem; }
+    .contact-form label { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.15rem; display: block; color: var(--fg); text-transform: uppercase; letter-spacing: 0.03em; }
+    .contact-form input, .contact-form textarea {
+      width: 100%; border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 0.6rem 0.9rem; font-size: 0.95rem; font-family: inherit;
+      background: var(--card); color: var(--fg); outline: none; transition: border-color 0.2s;
+    }
+    .contact-form input:focus, .contact-form textarea:focus { border-color: var(--primary-mid); box-shadow: 0 0 0 3px rgba(39,74,120,0.08); }
+    .contact-form textarea { resize: none; }
+    .contact-form button {
+      background: var(--fg); color: #fff; border: none; border-radius: var(--radius);
+      padding: 0.65rem 1.75rem; font-size: 0.875rem; font-weight: 600; cursor: pointer;
+      font-family: inherit; transition: background 0.2s, transform 0.15s; align-self: flex-start;
+      letter-spacing: 0.03em;
+    }
+    .contact-form button:hover { background: var(--gold); color: #1a2d45; transform: translateY(-1px); }
+
+    /* ── Map ── */
+    .map-section { padding: 0; }
+    .map-section iframe { display: block; width: 100%; height: 380px; border: 0; }
+    .map-header {
+      background: var(--fg); padding: 1rem 1.5rem;
+      display: flex; align-items: center; gap: 0.6rem;
+    }
+    .map-header svg { color: var(--gold); width: 18px; height: 18px; flex-shrink: 0; }
+    .map-header a {
+      font-size: 0.85rem; color: rgba(255,255,255,0.75);
+      transition: color 0.2s;
+    }
+    .map-header a:hover { color: var(--gold); text-decoration: underline; }
+
+    /* ── Footer ── */
+    .footer {
+      background: #0e1d2e;
+      border-top: 1px solid rgba(201,162,39,0.2);
+      padding: 2.5rem 1.5rem; font-size: 0.82rem;
+    }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; flex-direction: column;
+      align-items: center; gap: 0.6rem; text-align: center;
+    }
+    @media (min-width: 768px) {
+      .footer-inner { flex-direction: row; justify-content: space-between; text-align: left; }
+    }
+    .footer-brand {
+      font-family: 'DM Serif Display', serif;
+      color: var(--gold); font-size: 1rem; font-weight: 600;
+    }
+    .footer-mid { color: rgba(255,255,255,0.45); }
+    .footer-copy { color: rgba(255,255,255,0.35); }
+
+    /* ── Scroll Animation Classes ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1);
+      will-change: opacity, transform;
+    }
+    .reveal.reveal-left {
+      transform: translateX(-36px);
+    }
+    .reveal.reveal-right {
+      transform: translateX(36px);
+    }
+    .reveal.reveal-scale {
+      transform: scale(0.92) translateY(20px);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+    /* Staggered delay for grid children */
+    .stagger-children > *:nth-child(1) { transition-delay: 0ms; }
+    .stagger-children > *:nth-child(2) { transition-delay: 80ms; }
+    .stagger-children > *:nth-child(3) { transition-delay: 160ms; }
+    .stagger-children > *:nth-child(4) { transition-delay: 240ms; }
+    .stagger-children > *:nth-child(5) { transition-delay: 320ms; }
+    .stagger-children > *:nth-child(6) { transition-delay: 400ms; }
+    .stagger-children > *:nth-child(7) { transition-delay: 480ms; }
+    /* Hero content animation */
+    .hero-firm-name, .hero-designation, .hero-sub, .hero-badge {
+      opacity: 0;
+      animation: heroFadeUp 0.8s cubic-bezier(0.22,1,0.36,1) forwards;
+    }
+    .hero-firm-name    { animation-delay: 0.1s; }
+    .hero-designation  { animation-delay: 0.3s; }
+    .hero-sub          { animation-delay: 0.45s; }
+    .hero-badge        { animation-delay: 0.6s; }
+    @keyframes heroFadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Section title underline grow animation */
+    .section-title::after {
+      width: 0;
+      transition: width 0.6s cubic-bezier(0.22,1,0.36,1) 0.3s;
+    }
+    .section-title.title-visible::after {
+      width: 48px;
+    }
+
+    /* Gold shimmer on the hero line */
+    .hero::before {
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      background-size: 200% 100%;
+      animation: shimmer 3s ease-in-out infinite;
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    /* Scroll-to-top button */
+    #back-to-top {
+      position: fixed;
+      bottom: 1.75rem;
+      right: 1.75rem;
+      width: 42px; height: 42px;
+      background: var(--fg);
+      border: 1px solid rgba(201,162,39,0.4);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s, transform 0.3s, background 0.2s;
+      z-index: 40;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    }
+    #back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #back-to-top:hover {
+      background: var(--gold);
+    }
+    #back-to-top svg {
+      color: #fff;
+      width: 18px; height: 18px;
+      transition: color 0.2s;
+    }
+    #back-to-top:hover svg { color: var(--fg); }
+  </style>
 </head>
-
 <body>
 
-    <div class="container">
-        <h1>phele ye lao fir dunga website</h1>
-        <img src="https://www.maxgaming.com/bilder/artiklar/zoom/32721_1.jpg?m=1728981386" alt="Image">
-    </div>
+<!-- Scroll Progress Bar -->
+<div id="scroll-progress"></div>
 
+<!-- Back to Top Button -->
+<button id="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+  </svg>
+</button>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <div class="navbar-left">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/1/1f/New_CA_India_Logo.png"
+        alt="ICAI Logo"
+        class="navbar-ca-logo"
+      />
+      <span class="navbar-brand">
+        NC Sati and Co
+        <span class="brand-sub">Chartered Accountants</span>
+      </span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="menu-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open')" aria-label="Toggle menu">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="mobile-menu">
+    <a href="#hero" onclick="document.getElementById('mobile-menu').classList.remove('open')">Home</a>
+    <a href="#about" onclick="document.getElementById('mobile-menu').classList.remove('open')">About</a>
+    <a href="#services" onclick="document.getElementById('mobile-menu').classList.remove('open')">Services</a>
+    <a href="#contact" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="hero" class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-content">
+    <h1 class="hero-firm-name">NC Sati and Co</h1>
+    <p class="hero-designation">Chartered Accountants</p>
+    <p class="hero-sub">Professional accounting, taxation, audit, and compliance services for businesses and individuals in Haldwani, Uttarakhand.</p>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+  <h2 class="section-title reveal">About the Firm</h2>
+  <div class="about-content">
+    <p class="reveal">NC Sati and Co is a Chartered Accountancy firm established in October 2012 by CA Naveen Chandra Sati (FCA). Based in Haldwani, Uttarakhand, the firm offers a comprehensive range of accounting, taxation, audit, and advisory services tailored to the needs of a diverse clientele.</p>
+    <p class="reveal">The firm is committed to compliance, accuracy, and timely reporting. Our team of Chartered Accountants and qualified professionals works closely with every client to ensure that their financial and regulatory requirements are met with diligence and care.</p>
+    <p class="reveal">Over the years, NC Sati and Co has built a practice grounded in professional integrity, a thorough understanding of Indian tax and corporate law, and a genuine commitment to client success.</p>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="section section-alt">
+  <h2 class="section-title reveal">Our Services</h2>
+  <div class="services-grid stagger-children">
+    <div class="experience-card reveal reveal-scale">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+      <span class="label" style="font-size:1.15rem;">Serving since 2012</span>
+    </div>
+    <div class="service-card reveal">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      <h3>Audit &amp; Assurance</h3>
+      <p>Statutory audits, stock audits, and due diligence engagements conducted with thoroughness and professional rigour.</p>
+    </div>
+    <div class="service-card reveal">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+      <h3>Business Advisory &amp; Internal Audit</h3>
+      <p>Internal audit services and risk assessments to strengthen your organisation's financial controls and operational efficiency.</p>
+    </div>
+    <div class="service-card reveal">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+      <h3>Bookkeeping &amp; Outsourcing</h3>
+      <p>Bank reconciliation, ledger maintenance, financial statements, and preparation of trial balance and profit &amp; loss accounts.</p>
+    </div>
+    <div class="service-card reveal">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg>
+      <h3>Domestic Taxation</h3>
+      <p>Income tax return filing, tax audit, consultancy, and representation before tax authorities for all entities.</p>
+    </div>
+    <div class="service-card reveal">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+      <h3>ROC Compliances</h3>
+      <p>Company and LLP formation, annual return filings, board meeting compliances, and all statutory filings with the Registrar of Companies.</p>
+    </div>
+    <div class="service-card reveal">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 12h4"/><path d="M10 16h4"/></svg>
+      <h3>GST Compliances</h3>
+      <p>GST registration, return filing, advisory, GST audit, and guidance on changes in GST law and regulations.</p>
+    </div>
+    <div class="service-card reveal">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+      <h3>Other Services</h3>
+      <p>Internal control reviews, fixed asset register maintenance, and inventory management and verification services.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Detailed Services -->
+<section class="section">
+  <h2 class="section-title reveal">Detailed Service Overview</h2>
+  <div class="detailed-grid stagger-children">
+    <div class="detailed-item reveal reveal-left">
+      <h3>Audit &amp; Assurance</h3>
+      <ul>
+        <li>Statutory Audits under various statutes</li>
+        <li>Stock Audit for financial institutions</li>
+        <li>Due Diligence reviews for business transactions</li>
+      </ul>
+    </div>
+    <div class="detailed-item reveal reveal-right">
+      <h3>Business Advisory</h3>
+      <ul>
+        <li>Internal Audits for operational efficiency</li>
+        <li>Risk Assessment and mitigation planning</li>
+      </ul>
+    </div>
+    <div class="detailed-item reveal reveal-left">
+      <h3>Bookkeeping &amp; Outsourcing</h3>
+      <ul>
+        <li>Bank reconciliation and ledger maintenance</li>
+        <li>Preparation of financial statements</li>
+        <li>Trial Balance and Profit &amp; Loss preparation</li>
+      </ul>
+    </div>
+    <div class="detailed-item reveal reveal-right">
+      <h3>Domestic Taxation</h3>
+      <ul>
+        <li>Income tax return filing for all entities</li>
+        <li>Tax audit under the Income Tax Act</li>
+        <li>Tax planning and consultancy</li>
+        <li>Representation before Income Tax authorities</li>
+      </ul>
+    </div>
+    <div class="detailed-item reveal reveal-left">
+      <h3>ROC Compliances</h3>
+      <ul>
+        <li>Company and LLP formation</li>
+        <li>Annual return and financial statement filings</li>
+        <li>Board meeting and AGM compliances</li>
+        <li>Other statutory filings with the Registrar</li>
+      </ul>
+    </div>
+    <div class="detailed-item reveal reveal-right">
+      <h3>GST Compliances</h3>
+      <ul>
+        <li>Monthly and annual GST return filing</li>
+        <li>GST advisory and registration</li>
+        <li>GST audit and reconciliation</li>
+        <li>Updates on amendments in GST law</li>
+      </ul>
+    </div>
+    <div class="detailed-item reveal reveal-left">
+      <h3>Other Services</h3>
+      <ul>
+        <li>Internal control system reviews</li>
+        <li>Fixed asset register maintenance</li>
+        <li>Inventory management and verification</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Founder -->
+<section id="team" class="section section-alt">
+  <div class="founder-section reveal reveal-scale">
+    <h2 class="founder-name">CA Naveen Chandra Sati</h2>
+    <div class="founder-divider"></div>
+    <p class="founder-role">Founder &amp; Principal — NC Sati and Co</p>
+    <p class="founder-bio" style="margin-top:1rem;">CA Naveen Chandra Sati is a Fellow Member of the Institute of Chartered Accountants of India (ICAI) with over 14 years of experience in audit, taxation, and corporate compliance. He founded NC Sati and Co in 2012 with a vision to provide reliable and professional financial services to clients across Uttarakhand.</p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+  <h2 class="section-title reveal">Contact Us</h2>
+  <div class="contact-grid">
+    <div class="contact-info reveal reveal-left">
+      <div class="contact-row">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div>
+          <p class="label">Address</p>
+          <p class="value">14, First Floor, JMJK Complex, Basant Vihar,<br>Mukhani Road, Haldwani,<br>Distt. Nainital, Uttarakhand – 263139</p>
+        </div>
+      </div>
+      <div class="contact-row">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <div>
+          <p class="label">Email</p>
+          <a href="mailto:ncsatiandco@gmail.com" class="value">ncsatiandco@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-row">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        <div>
+          <p class="label">Phone</p>
+          <a href="tel:+918475928655" class="value">+91 84759 28655</a>
+        </div>
+      </div>
+    </div>
+    <form action="https://formsubmit.co/ncsatiandco@gmail.com" method="POST" class="contact-form reveal reveal-right">
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_subject" value="New Inquiry – NC Sati and Co" />
+      <div><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your full name" required /></div>
+      <div><label for="email">Email</label><input id="email" name="email" type="email" placeholder="your@email.com" required /></div>
+      <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="+91 XXXXX XXXXX" /></div>
+      <div><label for="message">Message</label><textarea id="message" name="message" rows="4" placeholder="How can we help you?" required></textarea></div>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Map -->
+<div class="map-section reveal">
+  <div style="position:relative; overflow:hidden; height:380px;">
+    <iframe
+      title="NC Sati and Co – Office Location"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3481.2!2d79.5169207!3d29.2162678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a09b6fa15fb415%3A0x731555dd4efb9835!2sNC%20SATI%20AND%20CO%2C%20Chartered%20Accountants!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+      width="100%" height="430"
+      style="border:0; display:block; margin-bottom:-50px;"
+      allowfullscreen loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-brand">NC Sati and Co</span>
+    <span class="footer-mid">Chartered Accountants · Haldwani, Uttarakhand</span>
+    <span class="footer-copy">&copy; <span id="footer-year"></span> NC Sati and Co. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+  // ── Dynamic year in footer
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+  // ── Scroll progress bar
+  const progressBar = document.getElementById('scroll-progress');
+  const backToTop   = document.getElementById('back-to-top');
+  const navbar      = document.getElementById('navbar');
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = pct + '%';
+
+    // Navbar shadow on scroll
+    navbar.classList.toggle('scrolled', scrollTop > 40);
+
+    // Back-to-top visibility
+    backToTop.classList.toggle('visible', scrollTop > 400);
+  }, { passive: true });
+
+  // ── Intersection Observer – reveal animations
+  const revealEls = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  revealEls.forEach(el => observer.observe(el));
+
+  // ── Section title underline grow
+  const titleEls = document.querySelectorAll('.section-title');
+  const titleObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('title-visible');
+        titleObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  titleEls.forEach(el => titleObserver.observe(el));
+</script>
 </body>
 </html>
