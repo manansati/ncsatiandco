@@ -56,8 +56,8 @@
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html { font-size: 16px; scroll-behavior: smooth; }
-    @media (min-width: 1024px) { html { font-size: 18px; } }
+    html { font-size: 18px; scroll-behavior: smooth; }
+    @media (min-width: 1024px) { html { font-size: 20px; } }
 
     :root {
       --bg: #f8f9fb;
@@ -105,7 +105,7 @@
     .navbar-left {
       display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0;
     }
-    .navbar-ca-logo {
+     .navbar-ca-logo {
       height: 42px; width: auto; display: block; flex-shrink: 0;
       background: #fff; border-radius: 4px; padding: 3px 5px;
     }
@@ -118,7 +118,7 @@
     .navbar-brand .brand-sub {
       display: block; font-family: 'DM Sans', sans-serif;
       font-size: 0.65rem; color: rgba(255,255,255,0.5);
-      font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 1px;
+      font-weight: 400; letter-spacing: 0.08em; margin-top: 1px;
     }
     .nav-links { display: flex; gap: 1.5rem; list-style: none; }
     .nav-links a { font-size: 0.875rem; color: rgba(255,255,255,0.7); transition: color 0.2s; letter-spacing: 0.02em; }
@@ -148,7 +148,7 @@
     .section-alt { background: var(--section-alt); }
 
     .section-title {
-      font-size: 1.6rem; font-weight: 700;
+      font-size: 1.85rem; font-weight: 700;
       text-align: center; margin-bottom: 3rem;
       color: var(--fg); position: relative; display: inline-block;
       width: 100%;
@@ -157,13 +157,15 @@
       content: ''; display: block; width: 48px; height: 3px;
       background: var(--gold); margin: 0.6rem auto 0; border-radius: 2px;
     }
-    @media (min-width: 768px) { .section-title { font-size: 1.875rem; } }
+    @media (min-width: 768px) { .section-title { font-size: 2.2rem; } }
 
     /* ── Hero ── */
     .hero {
       min-height: 88vh; display: flex; align-items: center; justify-content: center;
       padding-top: 62px; text-align: center; position: relative;
-      background: linear-gradient(150deg, #0e1d2e 0%, #1a2d45 45%, #1f3a5c 100%);
+      background:
+        linear-gradient(150deg, rgba(14,29,46,0.88) 0%, rgba(26,45,69,0.82) 45%, rgba(31,58,92,0.88) 100%),
+        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80') center center / cover no-repeat;
       overflow: hidden;
     }
     .hero-pattern {
@@ -216,20 +218,19 @@
 
     .hero-designation {
       color: rgba(255,255,255,0.9);
-      font-size: 1.15rem;
+      font-size: 1.25rem;
       font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
+      letter-spacing: 0.1em;
       margin-bottom: 1.5rem;
     }
-    @media (min-width: 768px) { .hero-designation { font-size: 1.35rem; } }
+    @media (min-width: 768px) { .hero-designation { font-size: 1.5rem; } }
 
     .hero-sub {
-      color: rgba(255,255,255,0.58);
-      font-size: 0.95rem;
-      max-width: 480px;
+      color: rgba(255,255,255,0.65);
+      font-size: 1.05rem;
+      max-width: 520px;
       margin: 0 auto 2rem;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     .hero-badge {
@@ -260,6 +261,11 @@
       font-size: 2rem; color: var(--gold); line-height: 1; flex-shrink: 0;
     }
     .about-highlight p { color: rgba(255,255,255,0.75); margin: 0; font-size: 0.88rem; }
+
+    /* About section background image */
+    #about {
+      position: relative;
+    }
 
     /* ── Services Grid ── */
     .services-grid {
@@ -339,19 +345,22 @@
     }
 
     /* ── Founder ── */
+    #team {
+      position: relative;
+    }
     .founder-section { text-align: center; }
     .founder-name {
       font-family: 'DM Serif Display', serif;
-      font-size: 1.6rem; color: var(--fg); font-weight: 700; margin-bottom: 0.3rem;
+      font-size: 2rem; color: var(--fg); font-weight: 700; margin-bottom: 0.3rem;
     }
-    .founder-role { font-size: 0.88rem; color: var(--muted); margin-top: 0.2rem; }
+    .founder-role { font-size: 1rem; color: var(--muted); margin-top: 0.2rem; }
     .founder-divider {
       width: 48px; height: 3px; background: var(--gold);
       margin: 1rem auto; border-radius: 2px;
     }
     .founder-bio {
-      max-width: 580px; margin: 0 auto;
-      font-size: 1rem; color: var(--muted); line-height: 1.8;
+      max-width: 640px; margin: 0 auto;
+      font-size: 1.05rem; color: var(--muted); line-height: 1.85;
     }
 
     /* ── Contact ── */
@@ -566,7 +575,7 @@
   <div class="hero-content">
     <h1 class="hero-firm-name">NC Sati and Co</h1>
     <p class="hero-designation">Chartered Accountants</p>
-    <p class="hero-sub">Professional accounting, taxation, audit, and compliance services for businesses and individuals in Haldwani, Uttarakhand.</p>
+    <p class="hero-sub"></p>
   </div>
 </section>
 
@@ -574,9 +583,9 @@
 <section id="about" class="section">
   <h2 class="section-title reveal">About the Firm</h2>
   <div class="about-content">
-    <p class="reveal">NC Sati and Co is a Chartered Accountancy firm established in October 2012 by CA Naveen Chandra Sati (FCA). Based in Haldwani, Uttarakhand, the firm offers a comprehensive range of accounting, taxation, audit, and advisory services tailored to the needs of a diverse clientele.</p>
-    <p class="reveal">The firm is committed to compliance, accuracy, and timely reporting. Our team of Chartered Accountants and qualified professionals works closely with every client to ensure that their financial and regulatory requirements are met with diligence and care.</p>
-    <p class="reveal">Over the years, NC Sati and Co has built a practice grounded in professional integrity, a thorough understanding of Indian tax and corporate law, and a genuine commitment to client success.</p>
+    <p class="reveal">Founded in October 2012 as Sati and Company, the firm has grown into a trusted pillar of financial expertise in Haldwani, Uttarakhand. In March 2026, it transitioned to its present identity — <strong>NC Sati and Co</strong> — reflecting an evolved vision and deepened specialisation across Accounting, Taxation, Audit, ROC, GST, and Business Advisory.</p>
+    <p class="reveal">Led by <strong>CA Naveen Chandra Sati (FCA)</strong>, the firm serves a diverse clientele ranging from local entrepreneurs to established entities, ensuring every financial goal is met with precision and compliance. Known in spiritual circles as <em>Naveen Krishna Das</em>, CA Sati brings a rare union of professional rigour and spiritual ethics — grounded in the conviction that financial practice is not merely about numbers, but about integrity and service.</p>
+    <p class="reveal">Our transition from 'Sati and Company' to 'NC Sati and Co' marks our continued commitment to growth, while staying true to the values of transparency, accuracy, and diligence that have defined us since 2012.</p>
   </div>
 </section>
 
@@ -601,8 +610,8 @@
     <div class="service-card reveal">
       <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
       <h3>Bookkeeping &amp; Outsourcing</h3>
-      <p>Bank reconciliation, ledger maintenance, financial statements, and preparation of trial balance and profit &amp; loss accounts.</p>
-    </div>
+      <p>Comprehensive
+outsourced accounting including real-time ledgers, bank reconciliations, and precise financial reporting for informed business decisions.</div>
     <div class="service-card reveal">
       <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg>
       <h3>Domestic Taxation</h3>
@@ -620,73 +629,13 @@
     </div>
     <div class="service-card reveal">
       <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+      <h3>Digital Signature Services</h3>
+      <p>Class 3 DSC for GST, Income Tax, ROC, PF, DGFT, and Tendering. Secure and paperless digital authentication.</p>
+    </div>
+    <div class="service-card reveal">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
       <h3>Other Services</h3>
       <p>Internal control reviews, fixed asset register maintenance, and inventory management and verification services.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Detailed Services -->
-<section class="section">
-  <h2 class="section-title reveal">Detailed Service Overview</h2>
-  <div class="detailed-grid stagger-children">
-    <div class="detailed-item reveal reveal-left">
-      <h3>Audit &amp; Assurance</h3>
-      <ul>
-        <li>Statutory Audits under various statutes</li>
-        <li>Stock Audit for financial institutions</li>
-        <li>Due Diligence reviews for business transactions</li>
-      </ul>
-    </div>
-    <div class="detailed-item reveal reveal-right">
-      <h3>Business Advisory</h3>
-      <ul>
-        <li>Internal Audits for operational efficiency</li>
-        <li>Risk Assessment and mitigation planning</li>
-      </ul>
-    </div>
-    <div class="detailed-item reveal reveal-left">
-      <h3>Bookkeeping &amp; Outsourcing</h3>
-      <ul>
-        <li>Bank reconciliation and ledger maintenance</li>
-        <li>Preparation of financial statements</li>
-        <li>Trial Balance and Profit &amp; Loss preparation</li>
-      </ul>
-    </div>
-    <div class="detailed-item reveal reveal-right">
-      <h3>Domestic Taxation</h3>
-      <ul>
-        <li>Income tax return filing for all entities</li>
-        <li>Tax audit under the Income Tax Act</li>
-        <li>Tax planning and consultancy</li>
-        <li>Representation before Income Tax authorities</li>
-      </ul>
-    </div>
-    <div class="detailed-item reveal reveal-left">
-      <h3>ROC Compliances</h3>
-      <ul>
-        <li>Company and LLP formation</li>
-        <li>Annual return and financial statement filings</li>
-        <li>Board meeting and AGM compliances</li>
-        <li>Other statutory filings with the Registrar</li>
-      </ul>
-    </div>
-    <div class="detailed-item reveal reveal-right">
-      <h3>GST Compliances</h3>
-      <ul>
-        <li>Monthly and annual GST return filing</li>
-        <li>GST advisory and registration</li>
-        <li>GST audit and reconciliation</li>
-        <li>Updates on amendments in GST law</li>
-      </ul>
-    </div>
-    <div class="detailed-item reveal reveal-left">
-      <h3>Other Services</h3>
-      <ul>
-        <li>Internal control system reviews</li>
-        <li>Fixed asset register maintenance</li>
-        <li>Inventory management and verification</li>
-      </ul>
     </div>
   </div>
 </section>
@@ -697,7 +646,8 @@
     <h2 class="founder-name">CA Naveen Chandra Sati</h2>
     <div class="founder-divider"></div>
     <p class="founder-role">Founder &amp; Principal — NC Sati and Co</p>
-    <p class="founder-bio" style="margin-top:1rem;">CA Naveen Chandra Sati is a Fellow Member of the Institute of Chartered Accountants of India (ICAI) with over 14 years of experience in audit, taxation, and corporate compliance. He founded NC Sati and Co in 2012 with a vision to provide reliable and professional financial services to clients across Uttarakhand.</p>
+    <p class="founder-bio" style="margin-top:1rem;">CA Naveen Chandra Sati is a Fellow Member of the Institute of Chartered Accountants of India (ICAI), building his practice in Audit, Taxation, and Corporate Compliance since 2012. Known in his spiritual circles as <em>Naveen Krishna Das</em>, his professional journey is a humble offering inspired by the mercy and teachings of His Divine Grace A.C. Bhaktivedanta Swami Prabhupada — Founder-Acharya of ISKCON.</p>
+    <p class="founder-bio" style="margin-top:1rem;">Guided by his Guru Maharaj, His Holiness Subhag Swami Maharaj, and drawing strength from the timeless wisdom of the Bhagavad Gita and Shrimad Bhagavatam, he views his work not as a business but as <em>Bhakti-Yoga</em> — service to society with unwavering transparency and integrity. He leads NC Sati and Co with a vision to integrate Vedic Ethics into Modern Economics, anchored in the principle: <strong>"Integrity in Accounts is a reflection of Purity in Heart."</strong></p>
   </div>
 </section>
 
@@ -763,7 +713,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── Dynamic year in footer
   document.getElementById('footer-year').textContent = new Date().getFullYear();
 
