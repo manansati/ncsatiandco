@@ -164,8 +164,7 @@
       min-height: 88vh; display: flex; align-items: center; justify-content: center;
       padding-top: 62px; text-align: center; position: relative;
       background:
-        linear-gradient(150deg, rgba(14,29,46,0.88) 0%, rgba(26,45,69,0.82) 45%, rgba(31,58,92,0.88) 100%),
-        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80') center center / cover no-repeat;
+        linear-gradient(150deg, rgba(14,29,46,1) 0%, rgba(26,45,69,1) 45%, rgba(31,58,92,1) 100%);
       overflow: hidden;
     }
     .hero-pattern {
@@ -430,22 +429,22 @@
     .footer-copy { color: rgba(255,255,255,0.35); }
 
     /* ── Scroll Animation Classes ── */
-    .reveal {
+    .js-ready .reveal {
       opacity: 0;
       transform: translateY(36px);
       transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1);
       will-change: opacity, transform;
     }
-    .reveal.reveal-left {
+    .js-ready .reveal.reveal-left {
       transform: translateX(-36px);
     }
-    .reveal.reveal-right {
+    .js-ready .reveal.reveal-right {
       transform: translateX(36px);
     }
-    .reveal.reveal-scale {
+    .js-ready .reveal.reveal-scale {
       transform: scale(0.92) translateY(20px);
     }
-    .reveal.visible {
+    .js-ready .reveal.visible {
       opacity: 1;
       transform: none;
     }
@@ -610,8 +609,7 @@
     <div class="service-card reveal">
       <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
       <h3>Bookkeeping &amp; Outsourcing</h3>
-      <p>Comprehensive
-outsourced accounting including real-time ledgers, bank reconciliations, and precise financial reporting for informed business decisions.</div>
+      <p>Experience stress-free accounting with our comprehensive outsourcing services. From meticulous ledger maintenance to precise financial reporting.</div>
     <div class="service-card reveal">
       <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg>
       <h3>Domestic Taxation</h3>
@@ -643,11 +641,10 @@ outsourced accounting including real-time ledgers, bank reconciliations, and pre
 <!-- Founder -->
 <section id="team" class="section section-alt">
   <div class="founder-section reveal reveal-scale">
-    <h2 class="founder-name">CA Naveen Chandra Sati</h2>
+    <h2 class="section-title" style="margin-bottom:0.5rem;">About the Founder</h2>
     <div class="founder-divider"></div>
-    <p class="founder-role">Founder &amp; Principal — NC Sati and Co</p>
-    <p class="founder-bio" style="margin-top:1rem;">CA Naveen Chandra Sati is a Fellow Member of the Institute of Chartered Accountants of India (ICAI), building his practice in Audit, Taxation, and Corporate Compliance since 2012. Known in his spiritual circles as <em>Naveen Krishna Das</em>, his professional journey is a humble offering inspired by the mercy and teachings of His Divine Grace A.C. Bhaktivedanta Swami Prabhupada — Founder-Acharya of ISKCON.</p>
-    <p class="founder-bio" style="margin-top:1rem;">Guided by his Guru Maharaj, His Holiness Subhag Swami Maharaj, and drawing strength from the timeless wisdom of the Bhagavad Gita and Shrimad Bhagavatam, he views his work not as a business but as <em>Bhakti-Yoga</em> — service to society with unwavering transparency and integrity. He leads NC Sati and Co with a vision to integrate Vedic Ethics into Modern Economics, anchored in the principle: <strong>"Integrity in Accounts is a reflection of Purity in Heart."</strong></p>
+    <p class="founder-bio" style="margin-top:1rem;">CA Naveen Chandra Sati is a Member of the Institute of Chartered Accountants of India (ICAI), building his practice in Audit, Taxation, and Corporate Compliance since 2012. Known in his spiritual circles as <b>Naveen Krishna Das</b>, his professional journey is a humble offering inspired by the mercy and teachings of His Divine Grace A.C. Bhaktivedanta Swami Prabhupada — Founder-Acharya of ISKCON.</p>
+    <p class="founder-bio" style="margin-top:1rem;">Guided by his Guru Maharaj, His Holiness Subhag Swami Maharaj, and drawing strength from the timeless wisdom of the Bhagavad Gita and Shrimad Bhagavatam, he views his work not as a business but as Bhakti-Yoga— service to society with unwavering transparency and integrity.</p>
   </div>
 </section>
 
@@ -713,7 +710,10 @@ outsourced accounting including real-time ledgers, bank reconciliations, and pre
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+  // ── Mark JS as active so reveal animations engage
+  document.documentElement.classList.add('js-ready');
+
   // ── Dynamic year in footer
   document.getElementById('footer-year').textContent = new Date().getFullYear();
 
@@ -756,14 +756,4 @@ outsourced accounting including real-time ledgers, bank reconciliations, and pre
   const titleEls = document.querySelectorAll('.section-title');
   const titleObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('title-visible');
-        titleObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  titleEls.forEach(el => titleObserver.observe(el));
-</script>
-</body>
-</html>
+      if 
